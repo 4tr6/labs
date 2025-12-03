@@ -1,0 +1,18 @@
+===============================
+        RECON REPORT
+===============================
+1) Network range discovery 
+Command Used: ip route 
+result ---> 192.168.243.0/24
+---------------------------
+2) Discovering all devices on the network
+command used: nmap -sn 192.168.243.0/24
+results ---> 5 hosts up including the target (192.168.243.134)
+---------------------------
+3) Indirect OS detection
+command used: sudo nmap -sV 192.168.243.134
+results:
+PORT     STATE SERVICE     VERSION
+21/tcp   open  ftp         vsftpd 2.3.4
+22/tcp   open  ssh         OpenSSH 4.7p1 Debian 8ubuntu1 (protocol 2.0)
+23/tcp   open  telnet      Linux telnetd
